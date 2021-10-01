@@ -1,0 +1,27 @@
+﻿<Window x:Class="MidtermApp_EleonoraKukash.ShoppingCartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MidtermApp_EleonoraKukash"
+        mc:Ignorable="d"
+        Title="Shopping Cart Summary-Eleonora Kukash" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="360*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Shopping cart:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="100"/>
+        <Label Content="Product Cost:" HorizontalAlignment="Left" Margin="10,18,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Order Total:" HorizontalAlignment="Left" Margin="23.2,18,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnClose" Content="Close" Grid.Column="2" HorizontalAlignment="Right" Margin="0,20,23.6,0" VerticalAlignment="Top" Width="95" Grid.Row="1" Height="22" Click="btnClose_Click"/>
+        <TextBox x:Name="tbCost" HorizontalAlignment="Left" Height="21" Margin="97,18,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbTotal" HorizontalAlignment="Left" Height="21" Margin="100.2,18,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ListBox x:Name="lstCart" Margin="20,41,23.6,12" Grid.ColumnSpan="3" HorizontalContentAlignment="Stretch" SelectionChanged="lstCart_SelectionChanged" ItemsSource="{Binding}"/>
+    </Grid>
+</Window>
